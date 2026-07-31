@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+:root  {
+    --oscuro: #1e2326;
+    --oscuro-suave: #252a2e;
+    --acento: #18bddb;
+    --acento-claro: #65e2f6;
+    --texto-suave: #bec6cc;
+}
+*  {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+html  {
+    scroll-behavior: smooth;
+}
+body  {
+    background: var(--oscuro);
+    color: #fff;
+}
+/* ---- particles.js container ---- */
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+}
+.contenedor-seccion  {
+    max-width: 1100px;
+    margin: auto;
+}
+.seccion  {
+    padding: 70px 20px;
+}
+.seccion h2  {
+    padding: 10px 0 42px;
+    font: 48px 'Righteous', sans-serif;
+    text-align: center;
+}
+/* ============================================
+MENÚ / ENCABEZADO
+============================================ */
+.contenedor-encabezado  {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    border-bottom: 1px solid transparent;
+    background: rgba(30, 35, 38, .95);
+    backdrop-filter: blur(12px);
+    transition: .3s;
+}
+.contenedor-encabezado.con-sombra  {
+    border-color: rgba(24, 189, 219, .3);
+}
+.contenedor-encabezado > header  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 20px;
+}
+.logo a  {
+    color: var(--acento);
+    font: 36px 'Righteous', sans-serif;
+    text-decoration: none;
+}
+.contenedor-encabezado ul  {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+.contenedor-encabezado nav a  {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: .25s;
+}
+.contenedor-encabezado nav a:hover  {
+    color: var(--acento);
+}
+.navegacion-responsive  {
+    display: none;
+    padding: 7px 10px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--acento);
+    color: #fff;
+    font-size: 18px;
+}
+/* ============================================
+SECCIÓN INICIO
+============================================ */
+.inicio  {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 90px 20px 30px;
+    background: linear-gradient(135deg, rgba(7, 8, 37, 0.85), rgba(18, 189, 219, 0.15)), url(../img/pxfuel.jp) center / cover;
+    color: #fff;
+}
+.contenedor-banner  {
+    max-width: 405px;
+    margin: auto;
+    padding: 30px 28px;
+    border: 1px solid rgba(101, 226, 246, .22);
+    border-radius: 28px;
+    background: rgba(30, 35, 38, .92);
+    box-shadow: 0 20px 55px rgba(0, 0, 0, .35);
+    text-align: center;
+}
+.contenedor-imagen img  {
+    display: block;
+    width: 270px;
+    height: 270px;
+    max-width: 80vw;
+    margin: auto;
+    border: 7px solid var(--acento);
+    border-radius: 50%;
+    object-fit: cover;
+}
+.contenedor-banner h1  {
+    margin-top: 25px;
+    font: 37px/1.08 'Righteous', sans-serif;
+}
+.contenedor-banner h2  {
+    margin-top: 12px;
+    color: var(--texto-suave);
+    font-size: 15px;
+    font-weight: 400;
+}
+.redes  {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 27px;
+}
+.redes a  {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border: 1px solid var(--acento);
+    border-radius: 50%;
+    color: var(--acento);
+    transition: .25s;
+}
+.redes a:hover  {
+    background: var(--acento);
+    color: var(--oscuro);
+    transform: translateY(-4px);
+}
+/* ============================================
+SECCIÓN SOBRE MÍ
+============================================ */
+.sobre-mi  {
+    background: var(--oscuro);
+}
+.introduccion  {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.65;
+}
+.fila  {
+    display: flex;
+    gap: 30px;
+}
+.columna  {
+    width: 50%;
+}
+.columna h3  {
+    margin-bottom: 25px;
+    font: 27px 'Righteous', sans-serif;
+}
+.datos-personales  {
+    list-style: none;
+}
+.datos-personales li  {
+    margin: 14px 0;
+    line-height: 1.4;
+}
+.datos-personales strong  {
+    display: inline-block;
+    width: 125px;
+    color: var(--acento);
+}
+.datos-personales span  {
+    padding: 3px 7px;
+    border-radius: 4px;
+    background: var(--acento);
+    color: var(--oscuro);
+    font-weight: 700;
+}
+.contenedor-intereses  {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.interes  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 105px;
+    height: 100px;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, .04);
+    border-radius: 10px;
+    background: var(--oscuro-suave);
+    transition: .3s;
+}
+.interes:hover  {
+    background: var(--acento);
+    color: var(--oscuro);
+    transform: translateY(-5px);
+}
+.interes i  {
+    font-size: 28px;
+}
+.interes span  {
+    font-size: 13px;
+}
+.boton  {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: max-content;
+    margin: 35px auto 0;
+    padding: 11px 22px;
+    overflow: hidden;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none;
+}
+.boton .superposicion  {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--acento);
+    transition: .4s;
+}
+.boton:hover  {
+    border-color: var(--acento);
+    color: var(--oscuro);
+}
+.boton:hover .superposicion  {
+    width: 100%;
+}
+/* ============================================
+SECCIÓN HABILIDADES
+============================================ */
+.habilidades  {
+    background: var(--oscuro-suave);
+}
+.habilidad  {
+    margin-bottom: 23px;
+}
+.habilidad > span  {
+    display: block;
+    margin-bottom: 9px;
+    font-weight: 600;
+}
+.barra-habilidad  {
+    position: relative;
+    width: 100%;
+    height: 9px;
+    overflow: visible;
+    border-radius: 10px;
+    background: #131517;
+}
+.progreso  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--acento), var(--acento-claro));
+    transition: width 1.15s cubic-bezier(.2, .8, .2, 1);
+}
+.progreso span  {
+    position: absolute;
+    top: -13px;
+    right: -15px;
+    width: 42px;
+    height: 34px;
+    border-radius: 18px;
+    background: var(--acento);
+    color: var(--oscuro);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 34px;
+    opacity: 0;
+    text-align: center;
+    transition: opacity .25s .85s;
+}
+.habilidades.animadas .progreso span  {
+    opacity: 1;
+}
+/* ============================================
+SECCIÓN FORMACIÓN Y EXPERIENCIA
+============================================ */
+.curriculum  {
+    background: var(--oscuro);
+}
+.curriculum .columna  {
+    padding: 0 24px;
+}
+.curriculum .izquierda  {
+    border-right: 2px solid var(--acento);
+}
+.curriculum .derecha  {
+    border-left: 2px solid var(--acento);
+}
+.curriculum .item  {
+    position: relative;
+    margin-bottom: 25px;
+    padding: 24px;
+    border-radius: 7px;
+    background: var(--oscuro-suave);
+    box-shadow: 0 7px 22px rgba(0, 0, 0, .12);
+    transition: .5s;
+}
+.curriculum .item:hover  {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .2);
+}
+.item h4  {
+    margin-bottom: 9px;
+    font-size: 19px;
+}
+.item .casa  {
+    display: block;
+    color: var(--acento);
+    font-size: 18px;
+    font-weight: 700;
+}
+.item .fecha  {
+    display: block;
+    margin: 8px 0;
+    color: var(--acento-claro);
+    font-size: 14px;
+}
+.item p  {
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.55;
+}
+.izquierda .conector, .derecha .conector  {
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 2px;
+    background: var(--acento);
+}
+.izquierda .conector  {
+    right: -25px;
+}
+.derecha .conector  {
+    left: -25px;
+}
+.izquierda .circulo, .derecha .circulo  {
+    position: absolute;
+    top: calc(50% - 5px);
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--acento);
+}
+.izquierda .circulo  {
+    right: -30px;
+}
+.derecha .circulo  {
+    left: -30px;
+}
+/* ============================================
+SECCIÓN PORTAFOLIO
+============================================ */
+.portafolio  {
+    background: var(--oscuro-suave);
+}
+.galeria  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+.proyecto  {
+    position: relative;
+    width: calc(33.333% - 12px);
+    height: 230px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #111;
+    cursor: pointer;
+}
+.proyecto img  {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s, filter .4s;
+}
+.proyecto:hover img  {
+    filter: brightness(.7);
+    transform: scale(1.09);
+}
+.superposicion-proyecto  {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(24, 189, 219, .86), rgba(24, 189, 219, .2));
+    opacity: 0;
+    text-align: center;
+    transition: .4s;
+}
+.proyecto:hover .superposicion-proyecto  {
+    opacity: 1;
+}
+.superposicion-proyecto h3, .superposicion-proyecto p  {
+    transform: translateY(12px);
+    transition: .4s;
+}
+.superposicion-proyecto h3  {
+    font-size: 21px;
+}
+.superposicion-proyecto p  {
+    margin-top: 6px;
+}
+.proyecto:hover .superposicion-proyecto > *  {
+    transform: none;
+}
+/* ============================================
+SECCIÓN CONTACTO
+============================================ */
+.contacto  {
+    background-image: url(../img/contact_bg.png);
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.contacto .container-section  {
+    max-width: 1100px;
+    margin: auto;
+}
+.contacto h2  {
+    font: 48px 'Righteous', sans-serif;
+    text-align: center;
+    padding: 20px 0;
+}
+.contacto .fila  {
+    display: flex;
+    gap: 0;
+}
+.contacto .col  {
+    width: 50%;
+    padding: 10px;
+}
+.contacto .col input,
+.contacto .col textarea  {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252a2e;
+    color: #fff;
+    font-size: 18px;
+}
+
+.col_image {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.mapa_ubicacion {
+    width: 100%;
+    height: 500px;
+}
+
+.contacto button  {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.contacto button .overlay  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #18BDDB;
+    z-index: -1;
+    transition: 1s;
+}
+.contacto button:hover .overlay  {
+    width: 100%;
+}
+.contacto .col iframe  {
+    width: 100%;
+    display: block;
+}
+.contacto .contenedor_imagen_info .info  {
+    padding: 20px;
+    min-width: 350px;
+}
+.contacto .contenedor_imagen_info .info ul  {
+    list-style: none;
+}
+.contacto .contenedor_imagen_info .info ul li  {
+    margin-bottom: 20px;
+}
+.contacto .contenedor_imagen_info .info ul li i  {
+    color: #18BDDB;
+    display: inline-block;
+    margin-right: 20px;
+}
+.contenedor_imagen_info  {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+/* ============================================
+PIE DE PÁGINA
+============================================ */
+footer  {
+    position: relative;
+    padding: 46px 0 25px;
+    background: var(--oscuro-suave);
+    color: var(--texto-suave);
+    font-size: 13px;
+    text-align: center;
+}
+footer .redes  {
+    margin: 0 0 20px;
+}
+.arriba  {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    display: grid;
+    width: 50px;
+    height: 50px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--acento);
+    color: var(--oscuro);
+    transform: translateX(-50%);
+}
+/* ============================================
+DISEÑO RESPONSIVO
+============================================ */
+@media screen and (max-width: 900px)  {
+    .contenedor-encabezado nav  {
+        display: none;
+    }
+    .contenedor-encabezado nav.abierto  {
+        position: absolute;
+        top: 67px;
+        left: 0;
+        display: block;
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        background: var(--oscuro-suave);
+    }
+    .contenedor-encabezado nav.abierto ul  {
+        display: block;
+        padding: 10px 20px;
+    }
+    .contenedor-encabezado nav.abierto li a  {
+        display: block;
+        padding: 12px;
+    }
+    .navegacion-responsive  {
+        display: block;
+    }
+    .proyecto  {
+        width: calc(50% - 9px);
+    }
+}
+@media screen and (max-width: 700px)  {
+    .seccion  {
+        padding: 55px 20px;
+    }
+    .seccion h2  {
+        padding-bottom: 30px;
+        font-size: 38px;
+    }
+    .fila  {
+        display: flex;
+        flex-direction: column;
+    }
+    .columna  {
+        width: 100%;
+    }
+    .columna + .columna  {
+        margin-top: 40px;
+    }
+    .curriculum .columna  {
+        padding: 0 0 0 22px;
+    }
+    .curriculum .izquierda  {
+        border-right: 0;
+        border-left: 2px solid var(--acento);
+    }
+    .curriculum .derecha  {
+        margin-top: 40px;
+    }
+    .izquierda .conector  {
+        right: auto;
+        left: -22px;
+    }
+    .izquierda .circulo  {
+        right: auto;
+        left: -27px;
+    }
+    .proyecto  {
+        width: 100%;
+        height: 250px;
+    }
+    .contenedor-banner h1  {
+        font-size: 31px;
+    }
+    .contenedor-imagen img  {
+        width: 235px;
+        height: 235px;
+    }
+    .contacto .fila .col,
+    .contacto .contenedor_imagen_info  {
+        width: 100%;
+    }
+    .contacto .contenedor_imagen_info .info  {
+        min-width: 0;
+    }
+}
+@media (prefers-reduced-motion: reduce)  {
+    *, *::before, *::after  {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+}
+
